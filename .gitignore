@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Wirtualne środowiska (bardzo ważne!)
+venv/
+env/
+.venv/
+.env/
+env.bak/
+venv.bak/
+
+# Twoje dane treningowe (Krytyczne!)
+# Nie wysyłaj ogromnych folderów ze zdjęciami na GitHuba
+/Dataset/
+dataset/
+*.csv
+*.txt
+
+# Zapisane modele i wagi sieci neuronowej (Zajmują dużo miejsca)
+*.h5
+*.hdf5
+*.keras
+*.pb
+*.tflite
+/saved_models/
+/models/
+/checkpoints/
+
+# Jupyter Notebook (punkty zapisu)
+.ipynb_checkpoints
+
+# IDE i środowiska (VS Code, PyCharm itp.)
+.vscode/
+.idea/
+*.swp
+
+# Różne systemowe (Windows / Mac)
+Thumbs.db
+desktop.ini
+.DS_Store
