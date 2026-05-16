@@ -1,0 +1,23 @@
+import tensorflow as tf
+from tensorflow.keras import datasets, layers, model
+
+
+def neural_network():
+    model = tf.models.Sequential()
+    model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(512, 512, 3)))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(64, (3, 3), activation='relu', input_shape=(512, 512, 3)))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(64, (3, 3), activation='relu', input_shape=(512, 512, 3)))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(8, (3, 3), activation='relu', input_shape=(512, 512, 3)))
+    model.add(layers.MaxPooling2D((2, 2)))
+
+    model.add(layers.Flatten())
+    model.add(layers.Dense(128, activation='softmax'))
+    model.add(layers.Dense(7))
+
+    return model
+
+
+
